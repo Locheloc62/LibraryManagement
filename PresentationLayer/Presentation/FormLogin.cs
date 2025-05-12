@@ -16,6 +16,7 @@ namespace PresentationLayer
     public partial class FormLogin : Form
     {
         private LoginBL loginBL;
+        public string LoggedInUsername { get; private set; }
         public FormLogin()
         {
             InitializeComponent();
@@ -43,6 +44,8 @@ namespace PresentationLayer
 
             if (UserLogin(account) == true)
             {
+                this.LoggedInUsername = txtUsername.Text.Trim();
+                this.DialogResult = DialogResult.OK;
                 this.DialogResult = DialogResult.OK;
             }
             else
@@ -58,10 +61,10 @@ namespace PresentationLayer
                     this.DialogResult = DialogResult.Cancel;
             }
         }
-
-        private void txtUsername_TextChanged(object sender, EventArgs e)
+        private void btnRes_Click(object sender, EventArgs e)
         {
-
+            FormResgister formResgister = new FormResgister();
+            formResgister.ShowDialog();
         }
     }
 }

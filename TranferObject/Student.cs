@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,5 +25,10 @@ namespace TranferObject
             this.dienthoai = dienthoai;
             this.email = email;
         }
+        public Student(string mssv)
+        {
+            this.mssv = mssv;
+        }
+     
     }
 }

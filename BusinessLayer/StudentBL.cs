@@ -45,5 +45,29 @@ namespace BusinessLayer
                 throw ex;
             }
         }
+        public int Delete(Student student)
+        {
+            try
+            {
+                return studentDL.Delete(student);
+
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+        public int Update(Student student)
+        {
+            try
+            {
+                return studentDL.Update(student);
+
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

@@ -50,7 +50,7 @@ namespace DataLayer
             List<SqlParameter> parameters = new List<SqlParameter>();
             parameters.Add(new SqlParameter("@hoten", student.hoten));
             parameters.Add(new SqlParameter("@mssv", student.mssv));
-            parameters.Add(new SqlParameter("@coso", student.coso));
+            parameters.Add(new SqlParameter("@coso",  student.coso));
             parameters.Add(new SqlParameter("@namhoc", student.namhoc));
             parameters.Add(new SqlParameter("@dienthoai", student.dienthoai));
             parameters.Add(new SqlParameter("@email", student.email));
@@ -66,9 +66,9 @@ namespace DataLayer
         }
         public int Delete(Student student)
         {
-            string sql = "uspDeleteSupplier"; //(1)
+            string sql = "uspDeleteStudent"; //(1)
             List<SqlParameter> parameters = new List<SqlParameter>();
-            parameters.Add(new SqlParameter("@id", student.));
+            parameters.Add(new SqlParameter("@mssv", student.mssv));
             try
             {
                 return MyExecuteNonQuery(sql, CommandType.StoredProcedure, parameters); //(2)
@@ -78,17 +78,16 @@ namespace DataLayer
                 throw ex;
             }
         }
-        public int Update(Supplier supplier)
+        public int Update(Student student)
         {
-            string sql = "uspUpdateSupplier"; //(1)
-            List<SqlParameter> parameters = new List<SqlParameter> {
-            //parameters.Add(new SqlParameter("@id", supplier.Id));
-            //parameters.Add(new SqlParameter("@name", supplier.Name));
-            //parameters.Add(new SqlParameter("@address", supplier.Address));
-            new SqlParameter("@id", supplier.Id),
-            new SqlParameter("name",supplier.Name),
-            new SqlParameter("address",supplier.Address)
-            };
+            string sql = "uspUpdateStudent"; //(1)
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter("@hoten", student.hoten));
+            parameters.Add(new SqlParameter("@mssv", student.mssv));
+            parameters.Add(new SqlParameter("@coso", student.coso));
+            parameters.Add(new SqlParameter("@namhoc", student.namhoc));
+            parameters.Add(new SqlParameter("@dienthoai", student.dienthoai));
+            parameters.Add(new SqlParameter("@email", student.email));
             try
             {
                 return MyExecuteNonQuery(sql, CommandType.StoredProcedure, parameters); //(2)

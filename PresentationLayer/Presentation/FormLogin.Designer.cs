@@ -62,9 +62,10 @@
             this.btnRes.Margin = new System.Windows.Forms.Padding(4);
             this.btnRes.Name = "btnRes";
             this.btnRes.Size = new System.Drawing.Size(168, 53);
-            this.btnRes.TabIndex = 15;
+            this.btnRes.TabIndex = 3;
             this.btnRes.Text = "Register";
             this.btnRes.UseVisualStyleBackColor = false;
+            this.btnRes.Click += new System.EventHandler(this.btnRes_Click);
             // 
             // lblPassword
             // 
@@ -89,7 +90,7 @@
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(168, 53);
-            this.btnLogin.TabIndex = 13;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -102,9 +103,8 @@
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(229, 37);
-            this.txtUsername.TabIndex = 12;
+            this.txtUsername.TabIndex = 0;
             this.txtUsername.Text = "admin";
-            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // txtPassword
             // 
@@ -115,7 +115,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(229, 37);
-            this.txtPassword.TabIndex = 11;
+            this.txtPassword.TabIndex = 1;
             this.txtPassword.Text = "123";
             // 
             // lblUsername
@@ -144,9 +144,10 @@
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lblUsername);
+            this.MaximizeBox = false;
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Đăng nhập";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

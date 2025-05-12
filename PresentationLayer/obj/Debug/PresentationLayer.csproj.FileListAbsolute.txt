@@ -18,3 +18,6 @@ D:\LTCSDL\LibraryManagement\PresentationLayer\obj\Debug\PresentationLayer.exe
 D:\LTCSDL\LibraryManagement\PresentationLayer\obj\Debug\PresentationLayer.pdb
 D:\LTCSDL\LibraryManagement\PresentationLayer\obj\Debug\PresentationLayer.Functions.FormStudent.resources
 D:\LTCSDL\LibraryManagement\PresentationLayer\obj\Debug\PresentationLayer.Functions.FormAddStudent.resources
+D:\LTCSDL\LibraryManagement\PresentationLayer\obj\Debug\PresentationLayer.Functions.FormBook.resources
+D:\LTCSDL\LibraryManagement\PresentationLayer\obj\Debug\PresentationLayer.Functions.FormAddBook.resources
+D:\LTCSDL\LibraryManagement\PresentationLayer\obj\Debug\PresentationLayer.FormResgister.resources

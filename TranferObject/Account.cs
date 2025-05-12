@@ -8,14 +8,28 @@ namespace TranferObject
 {
     public class Account
     {
-        public string Username { get; set; }
-        public string Password { get; set; }
-        //public int Type { get; set; }
-        public Account(string user, string pass)//, int type)
+        public string username { get; set; }
+        public string password { get; set; }
+        public string role { get; set; }
+        public string hoten { get; set; }
+        public Account(string username, string password)
         {
-            this.Username = user;
-            this.Password = pass;
-            //this.Type = type;
+            this.username = username;
+            this.password = password;
+        }
+        public Account(string username, string password, string hoten)
+        {
+            this.username = username;
+            this.password = password;
+            role = "user";
+            this.hoten = hoten;
+        }
+        public Account(string username, string password, string role, string hoten)
+        {
+            this.username = username;
+            this.password = password;
+            this.role = role;
+            this.hoten = hoten;
         }
     }
 }

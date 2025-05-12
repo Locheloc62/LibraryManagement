@@ -50,7 +50,7 @@
             this.pnlMain.Location = new System.Drawing.Point(410, 0);
             this.pnlMain.Margin = new System.Windows.Forms.Padding(4);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1098, 721);
+            this.pnlMain.Size = new System.Drawing.Size(1514, 739);
             this.pnlMain.TabIndex = 4;
             // 
             // panel2
@@ -68,7 +68,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(410, 721);
+            this.panel2.Size = new System.Drawing.Size(410, 739);
             this.panel2.TabIndex = 3;
             // 
             // btnIn
@@ -116,7 +116,7 @@
             this.pbExit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbExit.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pbExit.Image = ((System.Drawing.Image)(resources.GetObject("pbExit.Image")));
-            this.pbExit.Location = new System.Drawing.Point(0, 641);
+            this.pbExit.Location = new System.Drawing.Point(0, 659);
             this.pbExit.Name = "pbExit";
             this.pbExit.Size = new System.Drawing.Size(410, 80);
             this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -163,6 +163,7 @@
             this.btnSach.TabIndex = 1;
             this.btnSach.Text = "Quản lý sách";
             this.btnSach.UseVisualStyleBackColor = true;
+            this.btnSach.Click += new System.EventHandler(this.btnSach_Click);
             // 
             // btnSV
             // 
@@ -182,7 +183,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1508, 721);
+            this.ClientSize = new System.Drawing.Size(1924, 739);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.panel2);
             this.Name = "LibraryManagement";

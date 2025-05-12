@@ -26,7 +26,7 @@ namespace PresentationLayer
             if (result == DialogResult.OK)
             {
                 this.Enabled = true;
-                label1.Text = "Xin chào, " + "XXX";
+                label1.Text = "Welcome, " + login.LoggedInUsername;
             }
             else
             {
@@ -51,6 +51,11 @@ namespace PresentationLayer
         private void btnSV_Click(object sender, EventArgs e)
         {
             AddForm(new Functions.FormStudent());
+        }
+
+        private void btnSach_Click(object sender, EventArgs e)
+        {
+            AddForm(new Functions.FormBook());
         }
     }
 }
