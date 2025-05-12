@@ -1,0 +1,158 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\LTCSDL\\LibraryManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CB750667-8B85-4630-99D0-CA3932C54FAF}|PresentationLayer\\PresentationLayer.csproj|d:\\ltcsdl\\librarymanagement\\presentationlayer\\functions\\formstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CB750667-8B85-4630-99D0-CA3932C54FAF}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\functions\\formstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAF05420-725A-40C1-B419-172459C8BD62}|DataLayer\\DataLayer.csproj|d:\\ltcsdl\\librarymanagement\\datalayer\\studentdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAF05420-725A-40C1-B419-172459C8BD62}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\studentdl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79BD2880-3749-4A6D-BA10-2F984BD6FCEB}|BusinessLayer\\BusinessLayer.csproj|d:\\ltcsdl\\librarymanagement\\businesslayer\\studentbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79BD2880-3749-4A6D-BA10-2F984BD6FCEB}|BusinessLayer\\BusinessLayer.csproj|solutionrelative:businesslayer\\studentbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB750667-8B85-4630-99D0-CA3932C54FAF}|PresentationLayer\\PresentationLayer.csproj|d:\\ltcsdl\\librarymanagement\\presentationlayer\\functions\\formstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB750667-8B85-4630-99D0-CA3932C54FAF}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\functions\\formstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C8BD1156-E427-42FD-9FCA-680DE5E0FBAB}|TranferObject\\TranferObject.csproj|d:\\ltcsdl\\librarymanagement\\tranferobject\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8BD1156-E427-42FD-9FCA-680DE5E0FBAB}|TranferObject\\TranferObject.csproj|solutionrelative:tranferobject\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAF05420-725A-40C1-B419-172459C8BD62}|DataLayer\\DataLayer.csproj|d:\\ltcsdl\\librarymanagement\\datalayer\\logindl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAF05420-725A-40C1-B419-172459C8BD62}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\logindl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB750667-8B85-4630-99D0-CA3932C54FAF}|PresentationLayer\\PresentationLayer.csproj|d:\\ltcsdl\\librarymanagement\\presentationlayer\\presentation\\librarymanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB750667-8B85-4630-99D0-CA3932C54FAF}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\presentation\\librarymanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB750667-8B85-4630-99D0-CA3932C54FAF}|PresentationLayer\\PresentationLayer.csproj|d:\\ltcsdl\\librarymanagement\\presentationlayer\\presentation\\librarymanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CB750667-8B85-4630-99D0-CA3932C54FAF}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\presentation\\librarymanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 210,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormStudent.cs",
+              "DocumentMoniker": "D:\\LTCSDL\\LibraryManagement\\PresentationLayer\\Functions\\FormStudent.cs",
+              "RelativeDocumentMoniker": "PresentationLayer\\Functions\\FormStudent.cs",
+              "ToolTip": "D:\\LTCSDL\\LibraryManagement\\PresentationLayer\\Functions\\FormStudent.cs",
+              "RelativeToolTip": "PresentationLayer\\Functions\\FormStudent.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAIAxwBkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T07:39:17.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StudentBL.cs",
+              "DocumentMoniker": "D:\\LTCSDL\\LibraryManagement\\BusinessLayer\\StudentBL.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\StudentBL.cs",
+              "ToolTip": "D:\\LTCSDL\\LibraryManagement\\BusinessLayer\\StudentBL.cs",
+              "RelativeToolTip": "BusinessLayer\\StudentBL.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T07:33:47.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StudentDL.cs",
+              "DocumentMoniker": "D:\\LTCSDL\\LibraryManagement\\DataLayer\\StudentDL.cs",
+              "RelativeDocumentMoniker": "DataLayer\\StudentDL.cs",
+              "ToolTip": "D:\\LTCSDL\\LibraryManagement\\DataLayer\\StudentDL.cs",
+              "RelativeToolTip": "DataLayer\\StudentDL.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T07:28:50.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginDL.cs",
+              "DocumentMoniker": "D:\\LTCSDL\\LibraryManagement\\DataLayer\\LoginDL.cs",
+              "RelativeDocumentMoniker": "DataLayer\\LoginDL.cs",
+              "ToolTip": "D:\\LTCSDL\\LibraryManagement\\DataLayer\\LoginDL.cs",
+              "RelativeToolTip": "DataLayer\\LoginDL.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T07:28:25.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Student.cs",
+              "DocumentMoniker": "D:\\LTCSDL\\LibraryManagement\\TranferObject\\Student.cs",
+              "RelativeDocumentMoniker": "TranferObject\\Student.cs",
+              "ToolTip": "D:\\LTCSDL\\LibraryManagement\\TranferObject\\Student.cs",
+              "RelativeToolTip": "TranferObject\\Student.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAYwBAAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T07:23:58.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormStudent.cs [Design]",
+              "DocumentMoniker": "D:\\LTCSDL\\LibraryManagement\\PresentationLayer\\Functions\\FormStudent.cs",
+              "RelativeDocumentMoniker": "PresentationLayer\\Functions\\FormStudent.cs",
+              "ToolTip": "D:\\LTCSDL\\LibraryManagement\\PresentationLayer\\Functions\\FormStudent.cs [Design]",
+              "RelativeToolTip": "PresentationLayer\\Functions\\FormStudent.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T07:11:41.367Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LibraryManagement.cs",
+              "DocumentMoniker": "D:\\LTCSDL\\LibraryManagement\\PresentationLayer\\Presentation\\LibraryManagement.cs",
+              "RelativeDocumentMoniker": "PresentationLayer\\Presentation\\LibraryManagement.cs",
+              "ToolTip": "D:\\LTCSDL\\LibraryManagement\\PresentationLayer\\Presentation\\LibraryManagement.cs",
+              "RelativeToolTip": "PresentationLayer\\Presentation\\LibraryManagement.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAqwDQAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T07:06:36.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LibraryManagement.cs [Design]",
+              "DocumentMoniker": "D:\\LTCSDL\\LibraryManagement\\PresentationLayer\\Presentation\\LibraryManagement.cs",
+              "RelativeDocumentMoniker": "PresentationLayer\\Presentation\\LibraryManagement.cs",
+              "ToolTip": "D:\\LTCSDL\\LibraryManagement\\PresentationLayer\\Presentation\\LibraryManagement.cs [Design]",
+              "RelativeToolTip": "PresentationLayer\\Presentation\\LibraryManagement.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T07:06:35.184Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
