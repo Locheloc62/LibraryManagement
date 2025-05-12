@@ -16,6 +16,7 @@ namespace TranferObject
         public string email { get; set; }
         public Student(string hoten, string mssv, string coso, string namhoc, int dienthoai, string email)
         {
+            
             this.hoten = hoten;
             this.mssv = mssv;
             this.coso = coso;

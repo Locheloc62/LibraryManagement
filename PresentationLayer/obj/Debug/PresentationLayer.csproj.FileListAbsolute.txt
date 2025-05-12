@@ -17,3 +17,4 @@ D:\LTCSDL\LibraryManagement\PresentationLayer\obj\Debug\Presenta.9C561136.Up2Dat
 D:\LTCSDL\LibraryManagement\PresentationLayer\obj\Debug\PresentationLayer.exe
 D:\LTCSDL\LibraryManagement\PresentationLayer\obj\Debug\PresentationLayer.pdb
 D:\LTCSDL\LibraryManagement\PresentationLayer\obj\Debug\PresentationLayer.Functions.FormStudent.resources
+D:\LTCSDL\LibraryManagement\PresentationLayer\obj\Debug\PresentationLayer.Functions.FormAddStudent.resources

@@ -37,9 +37,14 @@ namespace PresentationLayer.Functions
             LoadStudent();
         }
 
-        private void dgvStudent_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            Functions.FormAddStudent frmAddStudent= new FormAddStudent();
+            DialogResult result = frmAddStudent.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                LoadStudent();
+            }
         }
     }
 }

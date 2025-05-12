@@ -29,5 +29,21 @@ namespace BusinessLayer
                 throw ex;
             }
         }
+        public int Add(Student student)
+        {
+            if (student.mssv.Length != 5)
+            {
+                throw new Exception("Id of supplier must be 5 character");
+            }
+            try
+            {
+                return studentDL.Add(student);
+
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

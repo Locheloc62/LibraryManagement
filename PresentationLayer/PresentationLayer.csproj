@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Functions\FormAddStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Functions\FormAddStudent.Designer.cs">
+      <DependentUpon>FormAddStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Functions\FormStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Functions\FormAddStudent.resx">
+      <DependentUpon>FormAddStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Functions\FormStudent.resx">
       <DependentUpon>FormStudent.cs</DependentUpon>
     </EmbeddedResource>
@@ -89,6 +98,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -112,6 +122,9 @@
       <Project>{c8bd1156-e427-42fd-9fca-680de5e0fbab}</Project>
       <Name>TranferObject</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
