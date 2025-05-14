@@ -74,44 +74,50 @@ namespace PresentationLayer.Functions
         {
             string mssv, name, coso, namhoc, email, tensach, ngaytra,ngaymuon;
             int  dienthoai;
-          
-            mssv = txtMssv.Text;
-            name = txtHoten.Text.Trim();
-            coso = txtCoso.Text.Trim();
-            namhoc = txtNamhoc.Text;
-            dienthoai = int.Parse(txtDienthoai.Text);
-            email = txtEmail.Text.Trim();
-            tensach = cbTensach.Text.Trim();
-            ngaymuon = dtpReturn.Text;
-            ngaytra = cbNgayTra.Text;
-           
-
-            BorrowBook borrowBook = new BorrowBook(mssv, name, coso, namhoc, dienthoai, email, tensach, ngaymuon, ngaytra);
-            try
+            if (txtHoten.Text == "")
             {
-                int NumOfRows = bookBL.UpdateBookReturn(borrowBook);
-
-
-                if (NumOfRows > 0)
-                {
-                    this.DialogResult = DialogResult.OK;
-                    MessageBox.Show("Mượn sách thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadBorrowBook();
-                }
-                else
-                {
-                    this.DialogResult = DialogResult.Cancel;
-                    MessageBox.Show("Mượn sách thất bại.", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
+                MessageBox.Show("Vui long nhap thong tin");
             }
-            catch (SqlException ex)
+            else
             {
-                MessageBox.Show(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Id of Supplier", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                mssv = txtMssv.Text;
+                name = txtHoten.Text.Trim();
+                coso = txtCoso.Text.Trim();
+                namhoc = txtNamhoc.Text;
+                dienthoai = int.Parse(txtDienthoai.Text);
+                email = txtEmail.Text.Trim();
+                tensach = cbTensach.Text.Trim();
+                ngaymuon = dtpReturn.Text;
+                ngaytra = cbNgayTra.Text;
+
+
+                BorrowBook borrowBook = new BorrowBook(mssv, name, coso, namhoc, dienthoai, email, tensach, ngaymuon, ngaytra);
+                try
+                {
+                    int NumOfRows = bookBL.UpdateBookReturn(borrowBook);
+
+
+                    if (NumOfRows > 0)
+                    {
+                        this.DialogResult = DialogResult.OK;
+                        MessageBox.Show("Mượn sách thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadBorrowBook();
+                    }
+                    else
+                    {
+                        this.DialogResult = DialogResult.Cancel;
+                        MessageBox.Show("Mượn sách thất bại.", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Id of Supplier", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             
         }

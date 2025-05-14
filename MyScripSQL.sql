@@ -179,5 +179,26 @@ BEGIN
 	WHERE id=@id;
 END
 GO
+---------------------
+--SEAT--------------
+------------------------
 
-drop proc uspUpdateReturnBook
+--uspUpdateSeat
+CREATE PROC uspUpdateSeat
+	@maso varchar(100),
+	@khuvuc nvarchar(50),
+	@loai nvarchar(30),
+	@trangthai nvarchar(20)
+AS 
+BEGIN
+	UPDATE Seat
+    SET 
+        maso = @maso,
+		khuvuc=@khuvuc,
+		loai=@loai,
+		trangthai=@trangthai
+    WHERE maso = @maso;
+END
+GO
+
+drop proc uspUpdateSeat

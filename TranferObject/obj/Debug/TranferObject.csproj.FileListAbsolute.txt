@@ -4,3 +4,9 @@ D:\LTCSDL\LibraryManagement\TranferObject\obj\Debug\TranferObject.csproj.Assembl
 D:\LTCSDL\LibraryManagement\TranferObject\obj\Debug\TranferObject.csproj.CoreCompileInputs.cache
 D:\LTCSDL\LibraryManagement\TranferObject\obj\Debug\TranferObject.dll
 D:\LTCSDL\LibraryManagement\TranferObject\obj\Debug\TranferObject.pdb
+D:\LTCSDL\LibraryManagement\LibraryManagement\TranferObject\bin\Debug\TranferObject.dll
+D:\LTCSDL\LibraryManagement\LibraryManagement\TranferObject\bin\Debug\TranferObject.pdb
+D:\LTCSDL\LibraryManagement\LibraryManagement\TranferObject\obj\Debug\TranferObject.csproj.AssemblyReference.cache
+D:\LTCSDL\LibraryManagement\LibraryManagement\TranferObject\obj\Debug\TranferObject.csproj.CoreCompileInputs.cache
+D:\LTCSDL\LibraryManagement\LibraryManagement\TranferObject\obj\Debug\TranferObject.dll
+D:\LTCSDL\LibraryManagement\LibraryManagement\TranferObject\obj\Debug\TranferObject.pdb

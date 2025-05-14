@@ -9,3 +9,14 @@ D:\LTCSDL\LibraryManagement\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCom
 D:\LTCSDL\LibraryManagement\BusinessLayer\obj\Debug\Business.EA331CBA.Up2Date
 D:\LTCSDL\LibraryManagement\BusinessLayer\obj\Debug\BusinessLayer.dll
 D:\LTCSDL\LibraryManagement\BusinessLayer\obj\Debug\BusinessLayer.pdb
+D:\LTCSDL\LibraryManagement\LibraryManagement\BusinessLayer\bin\Debug\BusinessLayer.dll
+D:\LTCSDL\LibraryManagement\LibraryManagement\BusinessLayer\bin\Debug\BusinessLayer.pdb
+D:\LTCSDL\LibraryManagement\LibraryManagement\BusinessLayer\bin\Debug\DataLayer.dll
+D:\LTCSDL\LibraryManagement\LibraryManagement\BusinessLayer\bin\Debug\TranferObject.dll
+D:\LTCSDL\LibraryManagement\LibraryManagement\BusinessLayer\bin\Debug\DataLayer.pdb
+D:\LTCSDL\LibraryManagement\LibraryManagement\BusinessLayer\bin\Debug\TranferObject.pdb
+D:\LTCSDL\LibraryManagement\LibraryManagement\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
+D:\LTCSDL\LibraryManagement\LibraryManagement\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+D:\LTCSDL\LibraryManagement\LibraryManagement\BusinessLayer\obj\Debug\Business.EA331CBA.Up2Date
+D:\LTCSDL\LibraryManagement\LibraryManagement\BusinessLayer\obj\Debug\BusinessLayer.dll
+D:\LTCSDL\LibraryManagement\LibraryManagement\BusinessLayer\obj\Debug\BusinessLayer.pdb

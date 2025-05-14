@@ -7,3 +7,12 @@ D:\LTCSDL\LibraryManagement\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInpu
 D:\LTCSDL\LibraryManagement\DataLayer\obj\Debug\DataLayer.csproj.Up2Date
 D:\LTCSDL\LibraryManagement\DataLayer\obj\Debug\DataLayer.dll
 D:\LTCSDL\LibraryManagement\DataLayer\obj\Debug\DataLayer.pdb
+D:\LTCSDL\LibraryManagement\LibraryManagement\DataLayer\bin\Debug\DataLayer.dll
+D:\LTCSDL\LibraryManagement\LibraryManagement\DataLayer\bin\Debug\DataLayer.pdb
+D:\LTCSDL\LibraryManagement\LibraryManagement\DataLayer\bin\Debug\TranferObject.dll
+D:\LTCSDL\LibraryManagement\LibraryManagement\DataLayer\bin\Debug\TranferObject.pdb
+D:\LTCSDL\LibraryManagement\LibraryManagement\DataLayer\obj\Debug\DataLayer.csproj.AssemblyReference.cache
+D:\LTCSDL\LibraryManagement\LibraryManagement\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+D:\LTCSDL\LibraryManagement\LibraryManagement\DataLayer\obj\Debug\DataLayer.csproj.Up2Date
+D:\LTCSDL\LibraryManagement\LibraryManagement\DataLayer\obj\Debug\DataLayer.dll
+D:\LTCSDL\LibraryManagement\LibraryManagement\DataLayer\obj\Debug\DataLayer.pdb

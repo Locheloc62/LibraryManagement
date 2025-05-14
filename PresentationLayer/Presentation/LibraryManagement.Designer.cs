@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LibraryManagement));
             this.pnlMain = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnIn = new System.Windows.Forms.Button();
             this.btnTra = new System.Windows.Forms.Button();
             this.btnMuon = new System.Windows.Forms.Button();
             this.pbExit = new System.Windows.Forms.PictureBox();
@@ -56,7 +55,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel2.Controls.Add(this.btnIn);
             this.panel2.Controls.Add(this.btnTra);
             this.panel2.Controls.Add(this.btnMuon);
             this.panel2.Controls.Add(this.pbExit);
@@ -70,19 +68,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(410, 739);
             this.panel2.TabIndex = 3;
-            // 
-            // btnIn
-            // 
-            this.btnIn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIn.ForeColor = System.Drawing.Color.Green;
-            this.btnIn.Location = new System.Drawing.Point(24, 557);
-            this.btnIn.Margin = new System.Windows.Forms.Padding(4);
-            this.btnIn.Name = "btnIn";
-            this.btnIn.Size = new System.Drawing.Size(358, 60);
-            this.btnIn.TabIndex = 5;
-            this.btnIn.Text = "danh sách sách mượn/trả";
-            this.btnIn.UseVisualStyleBackColor = true;
             // 
             // btnTra
             // 
@@ -118,9 +103,9 @@
             this.pbExit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbExit.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pbExit.Image = ((System.Drawing.Image)(resources.GetObject("pbExit.Image")));
-            this.pbExit.Location = new System.Drawing.Point(0, 659);
+            this.pbExit.Location = new System.Drawing.Point(0, 577);
             this.pbExit.Name = "pbExit";
-            this.pbExit.Size = new System.Drawing.Size(410, 80);
+            this.pbExit.Size = new System.Drawing.Size(410, 162);
             this.pbExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbExit.TabIndex = 0;
             this.pbExit.TabStop = false;
@@ -138,6 +123,7 @@
             this.btnPos.TabIndex = 2;
             this.btnPos.Text = "Quản lý chỗ ngồi";
             this.btnPos.UseVisualStyleBackColor = true;
+            this.btnPos.Click += new System.EventHandler(this.btnPos_Click);
             // 
             // label1
             // 
@@ -206,7 +192,6 @@
         private System.Windows.Forms.Button btnSach;
         private System.Windows.Forms.Button btnSV;
         private System.Windows.Forms.Button btnPos;
-        private System.Windows.Forms.Button btnIn;
         private System.Windows.Forms.Button btnTra;
         private System.Windows.Forms.Button btnMuon;
         private System.Windows.Forms.PictureBox pbExit;

@@ -67,5 +67,10 @@ namespace PresentationLayer
         {
             AddForm(new Functions.FormReturnBook());
         }
+
+        private void btnPos_Click(object sender, EventArgs e)
+        {
+            AddForm(new Functions.FormSeat());
+        }
     }
 }

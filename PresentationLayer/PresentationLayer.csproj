@@ -70,6 +70,12 @@
     <Compile Include="Functions\FormBorrowBook.Designer.cs">
       <DependentUpon>FormBorrowBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="Functions\FormSeat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Functions\FormSeat.Designer.cs">
+      <DependentUpon>FormSeat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Functions\FormStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,12 @@
     </Compile>
     <Compile Include="Functions\FormReturnBook.Designer.cs">
       <DependentUpon>FormReturnBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Functions\FormUpdateSeat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Functions\FormUpdateSeat.Designer.cs">
+      <DependentUpon>FormUpdateSeat.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\FormLogin.cs">
       <SubType>Form</SubType>
@@ -117,8 +129,14 @@
     <EmbeddedResource Include="Functions\FormReturnBook.resx">
       <DependentUpon>FormReturnBook.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Functions\FormSeat.resx">
+      <DependentUpon>FormSeat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Functions\FormStudent.resx">
       <DependentUpon>FormStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Functions\FormUpdateSeat.resx">
+      <DependentUpon>FormUpdateSeat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
