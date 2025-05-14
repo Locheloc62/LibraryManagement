@@ -28,7 +28,12 @@ namespace TranferObject
         public Book(string masach)
         {
             this.masach = masach;
-         
+          
+        }
+        public Book(string masach,string tensach)
+        {
+            this.masach = masach;
+            this.tensach=tensach;
         }
         public Book(string masach, string tensach, string tacGia, string theloai, int soluong, string trangthai)
         {

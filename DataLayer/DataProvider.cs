@@ -13,6 +13,7 @@ namespace DataLayer
     {
         //Biến toàn cục cùa lớp sqlconnection 
         private SqlConnection cn;
+        public SqlConnection Connection => cn;
         //Cung cấp đường dẫn đến cơ sở dữ liệu
         //Tạo 1 hàm cung cấp dữ liệu từ databse là dataprovider cho hàm này public 
         public DataProvider()
@@ -68,7 +69,16 @@ namespace DataLayer
                 SqlCommand cmd = new SqlCommand(sql, cn);
                 cmd.CommandType = type;
 
-                return (cmd.ExecuteScalar());
+                // Thêm các tham số vào SqlCommand
+                if (parameters != null)
+                {
+                    foreach (var parameter in parameters)
+                    {
+                        cmd.Parameters.Add(parameter); // Thêm tham số vào danh sách tham số của SqlCommand
+                    }
+                }
+
+                return cmd.ExecuteScalar(); // Thực thi câu lệnh và trả về kết quả
             }
             catch (SqlException ex)
             {

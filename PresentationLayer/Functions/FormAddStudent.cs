@@ -62,11 +62,6 @@ namespace PresentationLayer.Functions
             {
                 MessageBox.Show(ex.Message, "Id of Supplier", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        }    
     }
 }

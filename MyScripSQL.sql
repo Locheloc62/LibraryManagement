@@ -109,5 +109,75 @@ BEGIN
     INSERT INTO LoginTable (username, password,role,hoten)
     VALUES (@username, @password,@role,@hoten)
 END
+GO
+--------------------------
 
-drop proc uspAddAccount
+CREATE PROCEDURE uspAddStudentBorrowBook
+	@mssv varchar(250), 
+	@hoten nvarchar(250),
+	@coso nvarchar(250),
+	@namhoc varchar(250),
+	@dienthoai bigint,
+	@email varchar(250),
+	@tensach nvarchar(250),
+	@ngaymuon varchar(250)
+AS
+BEGIN
+	-- Kiểm tra xem dữ liệu đã tồn tại chưa
+	IF NOT EXISTS (
+		SELECT 1 FROM ISBook 
+		WHERE mssv = @mssv AND tensach = @tensach 
+	)
+	BEGIN
+		-- Nếu chưa có thì mới thêm
+		INSERT INTO ISBook (mssv, hoten, coso, namhoc, dienthoai, email, tensach, ngaymuon)
+		VALUES (@mssv, @hoten, @coso, @namhoc, @dienthoai, @email, @tensach, @ngaymuon)
+	END
+	ELSE
+	BEGIN
+		-- Có thể thông báo bằng cách trả giá trị (nếu cần)
+		RAISERROR('Thông tin đã tồn tại. Không thể thêm.', 16, 1)
+	END
+END
+GO
+drop proc uspAddStudentBorrowBook
+GO
+
+CREATE PROCEDURE uspUpdateReturnBook
+	@id int,
+	@mssv varchar(250), 
+	@hoten nvarchar(250),
+	@coso nvarchar(250),
+	@namhoc varchar(250),
+	@dienthoai bigint,
+	@email varchar(250),
+	@tensach nvarchar(250),
+	@ngaymuon varchar(250),
+	@ngaytra nvarchar(250)
+AS
+BEGIN
+   UPDATE ISBook
+    SET
+        mssv= @mssv,
+        hoten = @hoten,
+		coso=@coso,
+		namhoc=@namhoc,
+		dienthoai=@dienthoai,
+		email=@email,
+		tensach=@tensach,
+		ngaymuon=@ngaymuon,
+		ngaytra=@ngaytra
+    WHERE mssv = @mssv and id=@id;
+END
+GO 
+
+CREATE PROCEDURE uspDeleteReturnBook
+	@id int
+AS
+BEGIN 
+    DELETE FROM ISbook 
+	WHERE id=@id;
+END
+GO
+
+drop proc uspUpdateReturnBook

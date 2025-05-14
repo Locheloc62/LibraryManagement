@@ -23,18 +23,31 @@ namespace PresentationLayer
             loginBL=new LoginBL();
         }
 
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string user, pass, repass, hoten;
-            user=txtTK.Text;
-            pass=txtPass.Text;
-            repass=txtRePass.Text;
-            hoten=txtHoten.Text;
+        
+            pass = txtPass.Text;
+            repass = txtRePass.Text;
+            hoten = txtHoten.Text;
+
             if (pass != repass)
             {
                 MessageBox.Show("Mật khẩu nhập lại không khớp!");
                 return;
             }
+            user = txtTK.Text;
+
+            // Kiểm tra tên người dùng đã tồn tại chưa
+       
+            
+            if (loginBL.CheckHotenExists(user))
+            {
+                MessageBox.Show("Tài khoản này đã tồn tại. Vui lòng chọn tên người dùng khác.");
+            }
+            else
+            {
             Account account = new Account(user, pass, hoten);
             try
             {
@@ -49,10 +62,13 @@ namespace PresentationLayer
                     MessageBox.Show("Đăng ký thất bại!");
                 }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("Lỗi SQL: " + ex.Message);
+                MessageBox.Show("Lỗi: " + ex.Message);
             }
+            }
+           
         }
+
     }
 }

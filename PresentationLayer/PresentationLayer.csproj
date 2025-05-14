@@ -64,11 +64,23 @@
     <Compile Include="Functions\FormBook.Designer.cs">
       <DependentUpon>FormBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="Functions\FormBorrowBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Functions\FormBorrowBook.Designer.cs">
+      <DependentUpon>FormBorrowBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Functions\FormStudent.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Functions\FormStudent.Designer.cs">
       <DependentUpon>FormStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Functions\FormReturnBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Functions\FormReturnBook.Designer.cs">
+      <DependentUpon>FormReturnBook.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\FormLogin.cs">
       <SubType>Form</SubType>
@@ -98,6 +110,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Functions\FormBook.resx">
       <DependentUpon>FormBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Functions\FormBorrowBook.resx">
+      <DependentUpon>FormBorrowBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Functions\FormReturnBook.resx">
+      <DependentUpon>FormReturnBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Functions\FormStudent.resx">
       <DependentUpon>FormStudent.cs</DependentUpon>

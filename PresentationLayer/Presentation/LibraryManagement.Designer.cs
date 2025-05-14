@@ -96,6 +96,7 @@
             this.btnTra.TabIndex = 4;
             this.btnTra.Text = "Quản lý trả sách";
             this.btnTra.UseVisualStyleBackColor = true;
+            this.btnTra.Click += new System.EventHandler(this.btnTra_Click);
             // 
             // btnMuon
             // 
@@ -109,6 +110,7 @@
             this.btnMuon.TabIndex = 3;
             this.btnMuon.Text = "Quản lý mượn sách";
             this.btnMuon.UseVisualStyleBackColor = true;
+            this.btnMuon.Click += new System.EventHandler(this.btnMuon_Click);
             // 
             // pbExit
             // 

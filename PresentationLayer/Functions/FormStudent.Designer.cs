@@ -32,12 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAdd = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -159,9 +153,6 @@
             // hoten
             // 
             this.hoten.DataPropertyName = "hoten";
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Green;
-            this.hoten.DefaultCellStyle = dataGridViewCellStyle4;
             this.hoten.HeaderText = "Họ tên sinh viên";
             this.hoten.MinimumWidth = 6;
             this.hoten.Name = "hoten";
@@ -170,9 +161,6 @@
             // mssv
             // 
             this.mssv.DataPropertyName = "mssv";
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Green;
-            this.mssv.DefaultCellStyle = dataGridViewCellStyle5;
             this.mssv.HeaderText = "Mã số sinh viên";
             this.mssv.MinimumWidth = 6;
             this.mssv.Name = "mssv";
@@ -181,9 +169,6 @@
             // namhoc
             // 
             this.namhoc.DataPropertyName = "namhoc";
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Green;
-            this.namhoc.DefaultCellStyle = dataGridViewCellStyle6;
             this.namhoc.HeaderText = "Năm học";
             this.namhoc.MinimumWidth = 6;
             this.namhoc.Name = "namhoc";
@@ -192,9 +177,6 @@
             // dienthoai
             // 
             this.dienthoai.DataPropertyName = "dienthoai";
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Green;
-            this.dienthoai.DefaultCellStyle = dataGridViewCellStyle7;
             this.dienthoai.HeaderText = "Số điện thoại";
             this.dienthoai.MinimumWidth = 6;
             this.dienthoai.Name = "dienthoai";
@@ -203,9 +185,6 @@
             // coso
             // 
             this.coso.DataPropertyName = "coso";
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Green;
-            this.coso.DefaultCellStyle = dataGridViewCellStyle8;
             this.coso.HeaderText = "Cơ sở";
             this.coso.MinimumWidth = 6;
             this.coso.Name = "coso";
@@ -214,9 +193,6 @@
             // email
             // 
             this.email.DataPropertyName = "email";
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Green;
-            this.email.DefaultCellStyle = dataGridViewCellStyle9;
             this.email.HeaderText = "Email";
             this.email.MinimumWidth = 6;
             this.email.Name = "email";

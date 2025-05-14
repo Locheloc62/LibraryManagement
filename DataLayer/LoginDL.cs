@@ -41,6 +41,28 @@ namespace DataLayer
                 throw ex;
             }
         }
+        public bool CheckUsernameExists(string username)
+        {
+            string sql = "SELECT COUNT(*) FROM LoginTable WHERE username = @username"; // Câu lệnh SQL kiểm tra sự tồn tại của username
+            List<SqlParameter> parameters = new List<SqlParameter>
+    {
+        new SqlParameter("@username", SqlDbType.NVarChar) { Value = username } // Thêm tham số username vào câu lệnh
+    };
+
+            // Gọi phương thức MyExecuteScalar từ DataProvider để thực hiện truy vấn
+            object result = MyExcuteScalar(sql, CommandType.Text, parameters);
+
+            // Kiểm tra kết quả trả về (result) nếu không phải null và ép kiểu thành int
+            if (result != null && result != DBNull.Value)
+            {
+                int count = Convert.ToInt32(result);
+                return count > 0; // Nếu count > 0, nghĩa là username đã tồn tại trong cơ sở dữ liệu
+            }
+
+            return false; // Nếu không có kết quả hoặc count = 0, tài khoản không tồn tại
+        }
+
+
 
     }
 }

@@ -57,5 +57,15 @@ namespace PresentationLayer
         {
             AddForm(new Functions.FormBook());
         }
+
+        private void btnMuon_Click(object sender, EventArgs e)
+        {
+            AddForm(new Functions.FormBorrowBook());
+        }
+
+        private void btnTra_Click(object sender, EventArgs e)
+        {
+            AddForm(new Functions.FormReturnBook());
+        }
     }
 }

@@ -41,5 +41,9 @@ namespace BusinessLayer
                 throw ex;
             }
         }
+        public bool CheckHotenExists(string username)
+        {
+            return loginDL.CheckUsernameExists(username);
+        }
     }
 }
