@@ -50,8 +50,8 @@ namespace PresentationLayer
             }
             else
             {
-                string msg = "Username and password are incorrect!";
-                DialogResult result = MessageBox.Show(msg, "Login", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                string msg = "Tài khoản hoặc mật khẩu không đúng!";
+                DialogResult result = MessageBox.Show(msg, "Đăng nhập", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
                 if (result == DialogResult.Retry)
                 {
                     txtPassword.Clear();

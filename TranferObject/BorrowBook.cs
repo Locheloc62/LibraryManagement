@@ -57,6 +57,12 @@ namespace TranferObject
             this.tensach = tensach;   
             this.ngaymuon = ngaymuon;
         }
+        public BorrowBook(int id, string mssv,string ngaytra)
+        {
+            this.id = id;
+            this.mssv = mssv;
+            this.ngaytra = ngaytra;
+        }
         public BorrowBook(int id)
         {
            this.id = id;

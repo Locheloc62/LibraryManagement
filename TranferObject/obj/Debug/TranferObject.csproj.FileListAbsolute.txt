@@ -10,3 +10,9 @@ D:\LTCSDL\LibraryManagement\LibraryManagement\TranferObject\obj\Debug\TranferObj
 D:\LTCSDL\LibraryManagement\LibraryManagement\TranferObject\obj\Debug\TranferObject.csproj.CoreCompileInputs.cache
 D:\LTCSDL\LibraryManagement\LibraryManagement\TranferObject\obj\Debug\TranferObject.dll
 D:\LTCSDL\LibraryManagement\LibraryManagement\TranferObject\obj\Debug\TranferObject.pdb
+D:\LTCSDL\BaoCao\LibraryManagement\TranferObject\bin\Debug\TranferObject.dll
+D:\LTCSDL\BaoCao\LibraryManagement\TranferObject\bin\Debug\TranferObject.pdb
+D:\LTCSDL\BaoCao\LibraryManagement\TranferObject\obj\Debug\TranferObject.csproj.AssemblyReference.cache
+D:\LTCSDL\BaoCao\LibraryManagement\TranferObject\obj\Debug\TranferObject.csproj.CoreCompileInputs.cache
+D:\LTCSDL\BaoCao\LibraryManagement\TranferObject\obj\Debug\TranferObject.dll
+D:\LTCSDL\BaoCao\LibraryManagement\TranferObject\obj\Debug\TranferObject.pdb

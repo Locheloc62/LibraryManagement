@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBorrowBook));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -52,11 +52,11 @@
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.dgvBorrow = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
+            this.dgvStudent = new System.Windows.Forms.DataGridView();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBorrow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -66,7 +66,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(937, 100);
+            this.panel3.Size = new System.Drawing.Size(1118, 100);
             this.panel3.TabIndex = 5;
             // 
             // label1
@@ -79,13 +79,10 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Phiếu mượn sách";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.txtID);
             this.panel2.Controls.Add(this.dtpNgayMuon);
             this.panel2.Controls.Add(this.txtEmail);
             this.panel2.Controls.Add(this.btnLoad);
@@ -100,9 +97,9 @@
             this.panel2.Controls.Add(this.txtMssv);
             this.panel2.Controls.Add(this.txtHoten);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 400);
+            this.panel2.Location = new System.Drawing.Point(0, 598);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(937, 191);
+            this.panel2.Size = new System.Drawing.Size(1118, 191);
             this.panel2.TabIndex = 4;
             // 
             // dtpNgayMuon
@@ -213,10 +210,10 @@
             // 
             // dataGridViewImageColumn1
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle1.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle1.NullValue")));
-            this.dataGridViewImageColumn1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle9.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle9.NullValue")));
+            this.dataGridViewImageColumn1.DefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewImageColumn1.HeaderText = "Xóa";
             this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
             this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
@@ -226,10 +223,10 @@
             // 
             // dataGridViewImageColumn2
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle2.NullValue")));
-            this.dataGridViewImageColumn2.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle10.NullValue")));
+            this.dataGridViewImageColumn2.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridViewImageColumn2.HeaderText = "Sửa";
             this.dataGridViewImageColumn2.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn2.Image")));
             this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
@@ -246,36 +243,31 @@
             // dgvBorrow
             // 
             this.dgvBorrow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBorrow.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvBorrow.Location = new System.Drawing.Point(0, 100);
+            this.dgvBorrow.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvBorrow.Location = new System.Drawing.Point(0, 368);
             this.dgvBorrow.Name = "dgvBorrow";
             this.dgvBorrow.RowHeadersWidth = 51;
             this.dgvBorrow.RowTemplate.Height = 24;
-            this.dgvBorrow.Size = new System.Drawing.Size(937, 300);
+            this.dgvBorrow.Size = new System.Drawing.Size(1118, 230);
             this.dgvBorrow.TabIndex = 6;
-            this.dgvBorrow.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBorrow_CellContentClick);
             // 
-            // label3
+            // dgvStudent
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 17);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 16);
-            this.label3.TabIndex = 22;
-            this.label3.Text = "ID: ";
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(58, 14);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(56, 22);
-            this.txtID.TabIndex = 21;
+            this.dgvStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStudent.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvStudent.Location = new System.Drawing.Point(0, 100);
+            this.dgvStudent.Name = "dgvStudent";
+            this.dgvStudent.RowHeadersWidth = 51;
+            this.dgvStudent.RowTemplate.Height = 24;
+            this.dgvStudent.Size = new System.Drawing.Size(1118, 216);
+            this.dgvStudent.TabIndex = 7;
             // 
             // FormBorrowBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(937, 591);
+            this.ClientSize = new System.Drawing.Size(1118, 789);
+            this.Controls.Add(this.dgvStudent);
             this.Controls.Add(this.dgvBorrow);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -286,6 +278,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBorrow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -304,7 +297,6 @@
         private System.Windows.Forms.TextBox txtMssv;
         private System.Windows.Forms.TextBox txtHoten;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.DataGridView dgvBorrow;
         private System.Windows.Forms.ComboBox cbTensach;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtTimkiem;
@@ -312,7 +304,7 @@
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.DateTimePicker dtpNgayMuon;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.DataGridView dgvBorrow;
+        private System.Windows.Forms.DataGridView dgvStudent;
     }
 }

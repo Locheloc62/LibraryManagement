@@ -45,7 +45,7 @@ namespace BusinessLayer
         {
             if (book.masach.Length != 5)
             {
-                throw new Exception("Id of supplier must be 5 character");
+                throw new Exception("Mã sách gồm 5 ký tự");
             }
             try
             {
@@ -93,13 +93,22 @@ namespace BusinessLayer
                 throw ex;
             }
         }
-        public class GetMSSVBL
+        //public class GetMSSVBL
+        //{
+        //    private BookDL bookDL = new BookDL();
+
+        //    public List<BorrowBook> GetBorrowBooksByMSSV(string mssv)
+        //    {
+        //        return bookDL.GetBorrowBooksByMSS(mssv);
+        //    }
+        //}
+        public class GetMSSVAndIDBL
         {
             private BookDL bookDL = new BookDL();
 
-            public List<BorrowBook> GetBorrowBooksByMSSV(int id,string mssv)
+            public List<BorrowBook> GetBorrowBooksByMSSAndIDV(int id,string mssv)
             {
-                return bookDL.GetBorrowBooksByMSSV(id,mssv);
+                return bookDL.GetBorrowBooksByMSSAndIDV(id,mssv);
             }
         }
         public int AddBorrowBook(BorrowBook borrowBook)

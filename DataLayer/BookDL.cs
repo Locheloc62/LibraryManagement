@@ -174,10 +174,10 @@ namespace DataLayer
             }
         }
         DataProvider dp=new DataProvider();
-        public List<BorrowBook> GetBorrowBooksByMSSV(int id,string mssv)
+        public List<BorrowBook> GetBorrowBooksByMSSAndIDV(int id,string mssv)
         {
             List<BorrowBook> result = new List<BorrowBook>();
-            string sql = "SELECT * FROM ISBook WHERE id = @id and @mssv=@mssv";
+            string sql = "SELECT * FROM ISBook WHERE id = @id and mssv=@mssv";
 
             try
             {
@@ -215,6 +215,7 @@ namespace DataLayer
 
             return result;
         }
+       
         public int AddStudentBorrowBook(BorrowBook borrowBook)
         {
             string sql = "uspAddStudentBorrowBook"; //(1)
@@ -224,7 +225,7 @@ namespace DataLayer
             parameters.Add(new SqlParameter("@coso", borrowBook.coso));
             parameters.Add(new SqlParameter("@namhoc", borrowBook.namhoc));
             parameters.Add(new SqlParameter("@dienthoai", borrowBook.dienthoai));
-            parameters.Add(new SqlParameter("@email", borrowBook.dienthoai));
+            parameters.Add(new SqlParameter("@email", borrowBook.email));
             parameters.Add(new SqlParameter("@tensach", borrowBook.tensach));
             parameters.Add(new SqlParameter("@ngaymuon", borrowBook.ngaymuon));
         
@@ -242,14 +243,9 @@ namespace DataLayer
         {
             string sql = "uspUpdateReturnBook"; //(1)
             List<SqlParameter> parameters = new List<SqlParameter>();
+          
+            parameters.Add(new SqlParameter("@id", borrowBook.id));
             parameters.Add(new SqlParameter("@mssv", borrowBook.mssv));
-            parameters.Add(new SqlParameter("@hoten", borrowBook.hoten));
-            parameters.Add(new SqlParameter("@coso", borrowBook.coso));
-            parameters.Add(new SqlParameter("@namhoc", borrowBook.namhoc));
-            parameters.Add(new SqlParameter("@dienthoai", borrowBook.dienthoai));
-            parameters.Add(new SqlParameter("@email", borrowBook.dienthoai));
-            parameters.Add(new SqlParameter("@tensach", borrowBook.tensach));
-            parameters.Add(new SqlParameter("@ngaymuon", borrowBook.ngaymuon));
             parameters.Add(new SqlParameter("@ngaytra", borrowBook.ngaytra));
             try
             {

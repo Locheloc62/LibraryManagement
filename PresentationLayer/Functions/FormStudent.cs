@@ -58,17 +58,17 @@ namespace PresentationLayer.Functions
                 int rowsAffected = studentBL.Delete(student);
                 if (rowsAffected > 0)
                 {
-                    MessageBox.Show("Xoa thanh cong");
+                    MessageBox.Show("Xóa thành công","Thành công",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     LoadStudent();
                 }
                 else
                 {
-                    MessageBox.Show("Xoa that bai");
+                    MessageBox.Show("Xóa thất bại","Thất bại",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Loi khi xoa" + ex.Message);
+                MessageBox.Show("Lỗi khi xóa" + ex.Message);
             }
         }
         private void UpdateStudent(string hoten,string mssv, string coso, string namhoc,int dienthoai,string email)
@@ -80,17 +80,17 @@ namespace PresentationLayer.Functions
 
                 if (rowsAffected > 0)
                 {
-                    MessageBox.Show("Da cap nhat thanh cong");
+                    MessageBox.Show("Cập nhật thành công","Thành công",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     LoadStudent();
                 }
                 else
                 {
-                    MessageBox.Show("Cap nhat that bai");
+                    MessageBox.Show("Cập nhật thất bại","Thất bại",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Loi khi Cap nhat" + ex.Message);
+                MessageBox.Show("Lỗi khi cập nhật" + ex.Message);
             }
         }
 
@@ -112,7 +112,7 @@ namespace PresentationLayer.Functions
                 int dienthoai = int.Parse(dgvStudent.Rows[row].Cells["dienthoai"].Value.ToString());
                 string email = dgvStudent.Rows[row].Cells["email"].Value.ToString();
 
-                DialogResult result = MessageBox.Show("Are you sure?", "Update Information", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult result = MessageBox.Show("Bạn chắc chứ?", "Cập nhật thông tin", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (columnName == "Delete")
                 {
                     if (result == DialogResult.Yes)

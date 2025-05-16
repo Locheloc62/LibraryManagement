@@ -146,26 +146,11 @@ GO
 CREATE PROCEDURE uspUpdateReturnBook
 	@id int,
 	@mssv varchar(250), 
-	@hoten nvarchar(250),
-	@coso nvarchar(250),
-	@namhoc varchar(250),
-	@dienthoai bigint,
-	@email varchar(250),
-	@tensach nvarchar(250),
-	@ngaymuon varchar(250),
 	@ngaytra nvarchar(250)
 AS
 BEGIN
    UPDATE ISBook
     SET
-        mssv= @mssv,
-        hoten = @hoten,
-		coso=@coso,
-		namhoc=@namhoc,
-		dienthoai=@dienthoai,
-		email=@email,
-		tensach=@tensach,
-		ngaymuon=@ngaymuon,
 		ngaytra=@ngaytra
     WHERE mssv = @mssv and id=@id;
 END
@@ -201,4 +186,4 @@ BEGIN
 END
 GO
 
-drop proc uspUpdateSeat
+drop proc uspUpdateReturnBook

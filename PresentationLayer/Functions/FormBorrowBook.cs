@@ -14,16 +14,19 @@ using TranferObject;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 using static BusinessLayer.BookBL;
+using static BusinessLayer.StudentBL;
 
 namespace PresentationLayer.Functions
 {
     public partial class FormBorrowBook : Form
     {
         private BookBL bookBL;
+        private StudentBL studentBL;
         public FormBorrowBook()
         {
             InitializeComponent();
             bookBL = new BookBL();
+            studentBL=new StudentBL();
 
         }
         private void LoadBookNames()
@@ -40,11 +43,22 @@ namespace PresentationLayer.Functions
                 MessageBox.Show(ex.Message);
             }
         }
+        private void LoadStudent()
+        {
+            try
+            {
+                dgvStudent.DataSource = studentBL.GetStudents();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void LoadBorrowBook()
         {
             try
             {
-                dgvBorrow.DataSource = bookBL.GetBorrowBooks();
+                dgvBorrow.DataSource =bookBL.GetBorrowBooks();
             }
             catch (Exception ex)
             {
@@ -55,10 +69,11 @@ namespace PresentationLayer.Functions
         {
             LoadBorrowBook();
             LoadBookNames();
+            LoadStudent();
         }
         private void ClearFields()
         {
-            txtID.Clear();
+          
             txtHoten.Clear();
             txtMssv.Clear();
             txtCoso.Clear();
@@ -69,32 +84,24 @@ namespace PresentationLayer.Functions
         private void btnTimkiem_Click(object sender, EventArgs e)
         {
             // Kiểm tra đầu vào
-            if (txtTimkiem.Text != "" && txtID.Text != "")
+            if (txtTimkiem.Text != "" )
             {
-                int id;
-                if (!int.TryParse(txtID.Text.Trim(), out id))
-                {
-                    MessageBox.Show("ID không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
                 string mssv = txtTimkiem.Text.Trim();
                 GetMSSVBL bus = new GetMSSVBL();
-                List<BorrowBook> dsMuonSach = bus.GetBorrowBooksByMSSV(id, mssv);
+                List<Student> dsMuonSach = bus.GetStudentByMSS( mssv);
 
                 // Kiểm tra danh sách kết quả
                 if (dsMuonSach.Count > 0)
                 {
                     // Kiểm tra nếu có kết quả nhưng mssv hoặc id không khớp DataGridView
                     bool matchFound = false;
-                    foreach (DataGridViewRow row in dgvBorrow.Rows)
+                    foreach (DataGridViewRow row in dgvStudent.Rows)
                     {
                         if (!row.IsNewRow)
                         {
                             string rowMSSV = row.Cells["mssv"].Value?.ToString();
-                            int rowID = Convert.ToInt32(row.Cells["id"].Value);
 
-                            if (rowMSSV == mssv && rowID == id)
+                            if (rowMSSV == mssv)
                             {
                                 matchFound = true;
                                 break;
@@ -106,15 +113,15 @@ namespace PresentationLayer.Functions
                     {
                         MessageBox.Show("Không tìm thấy bản ghi khớp trong bảng hiển thị.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         ClearFields();
-                        dgvBorrow.DataSource = null;
+                        dgvStudent.DataSource = null;
                         return;
                     }
 
                     // Nếu khớp, hiển thị dữ liệu
-                    dgvBorrow.DataSource = dsMuonSach;
-                    BorrowBook bb = dsMuonSach[0];
+                    dgvStudent.DataSource = dsMuonSach;
+                    Student bb = dsMuonSach[0];
 
-                    txtID.Text = bb.id.ToString();
+                 
                     txtHoten.Text = bb.hoten;
                     txtMssv.Text = bb.mssv;
                     txtCoso.Text = bb.coso;
@@ -143,9 +150,9 @@ namespace PresentationLayer.Functions
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (txtHoten.Text == "")
+            if (txtHoten.Text == ""|| txtCoso.Text=="" || txtMssv.Text=="" || txtNamhoc.Text=="")
             {
-                MessageBox.Show("Vui lòng nhập thông tin");
+                MessageBox.Show("Vui lòng nhập thông tin","Lỗi",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             else
             {
@@ -156,7 +163,6 @@ namespace PresentationLayer.Functions
                 string email = txtEmail.Text.Trim();
                 string tensach = cbTensach.Text.Trim();
                 string ngaymuon = dtpNgayMuon.Text.Trim();
-
                 int dienthoai;
                 if (!int.TryParse(txtDienthoai.Text, out dienthoai))
                 {
@@ -201,24 +207,13 @@ namespace PresentationLayer.Functions
                 }
                 catch (SqlException ex)
                 {
-                    MessageBox.Show("Lỗi SQL: " + ex.Message);
+                    MessageBox.Show("Lỗi" + ex.Message);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Lỗi" + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-        }
-
-
-        private void dgvBorrow_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

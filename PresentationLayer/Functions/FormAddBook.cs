@@ -73,7 +73,7 @@ namespace PresentationLayer.Functions
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Id of Supplier", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

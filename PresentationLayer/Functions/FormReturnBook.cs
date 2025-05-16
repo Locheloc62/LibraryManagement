@@ -72,55 +72,51 @@ namespace PresentationLayer.Functions
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string mssv, name, coso, namhoc, email, tensach, ngaytra,ngaymuon;
-            int  dienthoai;
-            if (txtHoten.Text == "")
+            string ngaytra, mssv;
+            int id;
+
+            if (string.IsNullOrWhiteSpace(txtHoten.Text))
             {
-                MessageBox.Show("Vui long nhap thong tin");
+                MessageBox.Show("Vui lòng nhập thông tin","Lỗi",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
             }
-            else
+
+            try
             {
-                mssv = txtMssv.Text;
-                name = txtHoten.Text.Trim();
-                coso = txtCoso.Text.Trim();
-                namhoc = txtNamhoc.Text;
-                dienthoai = int.Parse(txtDienthoai.Text);
-                email = txtEmail.Text.Trim();
-                tensach = cbTensach.Text.Trim();
-                ngaymuon = dtpReturn.Text;
+                id = int.Parse(txtID.Text);
                 ngaytra = cbNgayTra.Text;
+                mssv = txtMssv.Text;
 
+                BorrowBook borrowBook = new BorrowBook(id, mssv, ngaytra);
 
-                BorrowBook borrowBook = new BorrowBook(mssv, name, coso, namhoc, dienthoai, email, tensach, ngaymuon, ngaytra);
-                try
+                int NumOfRows = bookBL.UpdateBookReturn(borrowBook);
+
+                if (NumOfRows > 0)
                 {
-                    int NumOfRows = bookBL.UpdateBookReturn(borrowBook);
-
-
-                    if (NumOfRows > 0)
-                    {
-                        this.DialogResult = DialogResult.OK;
-                        MessageBox.Show("Mượn sách thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        LoadBorrowBook();
-                    }
-                    else
-                    {
-                        this.DialogResult = DialogResult.Cancel;
-                        MessageBox.Show("Mượn sách thất bại.", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-
+                    this.DialogResult = DialogResult.OK;
+                    MessageBox.Show("Trả sách thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadBorrowBook();
                 }
-                catch (SqlException ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Id of Supplier", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    this.DialogResult = DialogResult.Cancel;
+                    MessageBox.Show("Trả sách thất bại!", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            
+            catch (FormatException)
+            {
+                MessageBox.Show("ID phải là số.", "Lỗi định dạng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
+
 
         private void txtMssv_TextChanged(object sender, EventArgs e)
         {
@@ -149,8 +145,8 @@ namespace PresentationLayer.Functions
                 }
 
                 string mssv = txtTimkiem.Text.Trim();
-                GetMSSVBL bus = new GetMSSVBL();
-                List<BorrowBook> dsMuonSach = bus.GetBorrowBooksByMSSV(id, mssv);
+                GetMSSVAndIDBL bus = new GetMSSVAndIDBL();
+                List<BorrowBook> dsMuonSach = bus.GetBorrowBooksByMSSAndIDV(id, mssv);
 
                 // Kiểm tra danh sách kết quả
                 if (dsMuonSach.Count > 0)
@@ -190,6 +186,7 @@ namespace PresentationLayer.Functions
                     txtCoso.Text = bb.coso;
                     txtNamhoc.Text = bb.namhoc;
                     txtDienthoai.Text = bb.dienthoai.ToString();
+                    cbTensach.Text = bb.tensach;
                     txtEmail.Text = bb.email;
                 }
             }
@@ -209,17 +206,17 @@ namespace PresentationLayer.Functions
                 int rowsAffected = bookBL.DeleteReturnBook(borrowBook);
                 if (rowsAffected > 0)
                 {
-                    MessageBox.Show("Xoa thanh cong");
+                    MessageBox.Show("Xóa thành công","Thành công",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     LoadBorrowBook();
                 }
                 else
                 {
-                    MessageBox.Show("Xoa that bai");
+                    MessageBox.Show("Xóa thất","Thất bại",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Loi khi xoa" + ex.Message);
+                MessageBox.Show("Lỗi khi xóa" + ex.Message);
             }
         }
 
@@ -244,7 +241,7 @@ namespace PresentationLayer.Functions
                 string ngaymuon = dgvReturn.Rows[row].Cells["ngaymuon"].Value.ToString();
                 string ngaytra = dgvReturn.Rows[row].Cells["ngaytra"].Value.ToString();
 
-                DialogResult result = MessageBox.Show("Are you sure?", "Update Information", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult result = MessageBox.Show("Bạn chắc chứ?", "Cập nhật thông tin", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (columnName == "Delete")
                 {
                     if (result == DialogResult.Yes)

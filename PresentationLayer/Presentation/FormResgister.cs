@@ -34,7 +34,7 @@ namespace PresentationLayer
 
             if (pass != repass)
             {
-                MessageBox.Show("Mật khẩu nhập lại không khớp!");
+                MessageBox.Show("Mật khẩu nhập lại không khớp!","Đăng ký", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             user = txtTK.Text;
@@ -44,7 +44,7 @@ namespace PresentationLayer
             
             if (loginBL.CheckHotenExists(user))
             {
-                MessageBox.Show("Tài khoản này đã tồn tại. Vui lòng chọn tên người dùng khác.");
+                MessageBox.Show("Tài khoản này đã tồn tại. Vui lòng chọn tên người dùng khác.","Lỗi",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             else
             {
@@ -54,12 +54,12 @@ namespace PresentationLayer
                 int result = loginBL.AddLogin(account);
                 if (result > 0)
                 {
-                    MessageBox.Show("Đăng ký thành công!");
+                    MessageBox.Show("Đăng ký thành công!","Thành công",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Đăng ký thất bại!");
+                    MessageBox.Show("Đăng ký thất bại!"," Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)

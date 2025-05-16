@@ -26,7 +26,7 @@ namespace PresentationLayer
             if (result == DialogResult.OK)
             {
                 this.Enabled = true;
-                label1.Text = "Welcome, " + login.LoggedInUsername;
+                label1.Text = "Xin chào, " + login.LoggedInUsername;
             }
             else
             {

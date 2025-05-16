@@ -1,7 +1,16 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\LTCSDL\\LibraryManagement\\LibraryManagement\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\LTCSDL\\BaoCao\\LibraryManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CB750667-8B85-4630-99D0-CA3932C54FAF}|PresentationLayer\\PresentationLayer.csproj|d:\\ltcsdl\\baocao\\librarymanagement\\presentationlayer\\functions\\formborrowbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB750667-8B85-4630-99D0-CA3932C54FAF}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\functions\\formborrowbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB750667-8B85-4630-99D0-CA3932C54FAF}|PresentationLayer\\PresentationLayer.csproj|d:\\ltcsdl\\baocao\\librarymanagement\\presentationlayer\\functions\\formborrowbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CB750667-8B85-4630-99D0-CA3932C54FAF}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\functions\\formborrowbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -9,11 +18,36 @@
       "DocumentGroups": [
         {
           "DockedHeight": 210,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormBorrowBook.cs",
+              "DocumentMoniker": "D:\\LTCSDL\\BaoCao\\LibraryManagement\\PresentationLayer\\Functions\\FormBorrowBook.cs",
+              "RelativeDocumentMoniker": "PresentationLayer\\Functions\\FormBorrowBook.cs",
+              "ToolTip": "D:\\LTCSDL\\BaoCao\\LibraryManagement\\PresentationLayer\\Functions\\FormBorrowBook.cs",
+              "RelativeToolTip": "PresentationLayer\\Functions\\FormBorrowBook.cs",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAIwLQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T11:23:33.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormBorrowBook.cs [Design]",
+              "DocumentMoniker": "D:\\LTCSDL\\BaoCao\\LibraryManagement\\PresentationLayer\\Functions\\FormBorrowBook.cs",
+              "RelativeDocumentMoniker": "PresentationLayer\\Functions\\FormBorrowBook.cs",
+              "ToolTip": "D:\\LTCSDL\\BaoCao\\LibraryManagement\\PresentationLayer\\Functions\\FormBorrowBook.cs [Design]",
+              "RelativeToolTip": "PresentationLayer\\Functions\\FormBorrowBook.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T11:23:32.696Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

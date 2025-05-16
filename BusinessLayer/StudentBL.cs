@@ -31,9 +31,9 @@ namespace BusinessLayer
         }
         public int Add(Student student)
         {
-            if (student.mssv.Length != 5)
+            if (student.mssv.Length != 10)
             {
-                throw new Exception("Id of supplier must be 5 character");
+                throw new Exception("Mã số sinh viên phải 10 ký tự");
             }
             try
             {
@@ -67,6 +67,15 @@ namespace BusinessLayer
             catch (SqlException ex)
             {
                 throw ex;
+            }
+        }
+        public class GetMSSVBL
+        {
+            private StudentDL studentDL = new StudentDL();
+
+            public List<Student> GetStudentByMSS(string mssv)
+            {
+                return studentDL.GetStudentByMSS(mssv);
             }
         }
     }
